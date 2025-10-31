@@ -1,0 +1,8 @@
+.moving-bg {
+  background-image: url("C:\Users\gsrik\Desktop\college project\frontend\OIP.webp"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  min-height: 100vh; 
+}
