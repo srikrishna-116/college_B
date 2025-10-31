@@ -6,16 +6,21 @@ import Contact from "./Page/Contact";
 import Longin from "./component/Login";
 import Sin from "./component/Sin";
 import Profile from "./Page/Profile";
-import Myposts from"./Page/Myposts";
+import Myposts from "./Page/Myposts";
+import Feed from "./Page/Feed";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import { Row, Col, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Feed from "./Page/Feed";
+import OIP from "./OIP.webp"; // import the image from src folder
+
 function App() {
   return (
     <BrowserRouter>
-      <div className="moving-bg min-vh-100">
+      <div 
+        className="moving-bg min-vh-100"
+        style={{ backgroundImage: `url(${OIP})` }} // use image here
+      >
         <Container fluid className="p-0">
           <Row>
             <Col>
@@ -60,15 +65,15 @@ function App() {
                 <Route path="/sin" element={<Sin />} />
                 <Route path="/Profile" element={<Profile />} />
                 <Route path="/feed" element={<Feed />} />
-                <Route path="/myposts" element={<Myposts/>} />
+                <Route path="/myposts" element={<Myposts />} />
                 <Route path="/" element={<Home />} /> 
               </Routes>
             </Col>
           </Row>
         </Container>
-
       </div>
     </BrowserRouter>
   );
 }
+
 export default App;
